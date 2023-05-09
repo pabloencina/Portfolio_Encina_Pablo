@@ -13,7 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import photoCv from "../Components/Images/photo-cv.jpg";
-import "../Components/CssStyles/navbar.css";
+import "../Components/css styles/navbar.css";
 
 const pages = ["About Me", "My Skills", "Projects"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];

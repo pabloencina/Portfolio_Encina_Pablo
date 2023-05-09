@@ -1,8 +1,15 @@
 import { Grid } from "@mui/material";
-import React from "react";
-import ProjectCards from "./ProjectCards";
+import React, { useState } from "react";
+import ProjectCardsName from "./ProjectCardsName";
+import ProjectCardsDescription from "./ProjectCardsDescription";
 
 const CardsContainer = () => {
+  const [showNewCard, setShowNewCard] = useState(false);
+
+  const handleCardClick = (e) => {
+    setShowNewCard(true);
+  };
+
   return (
     <Grid
       container
@@ -13,7 +20,11 @@ const CardsContainer = () => {
         alignItems: "center",
       }}
     >
-      <ProjectCards />
+      {!showNewCard ? (
+        <ProjectCardsName handleCardClick={handleCardClick} />
+      ) : (
+        <ProjectCardsDescription handleCardClick={handleCardClick} />
+      )}
     </Grid>
   );
 };

@@ -1,15 +1,13 @@
 import { Box, CardMedia, Grid, Typography } from "@mui/material";
 import backgroundAboutMe from "../Images/background-section-about-me.jpg";
-import "../CssStyles/paragraphStyles.css";
-import "../CssStyles/boxStyles.css";
-import HtmlIcon from "@mui/icons-material/Html";
-import CssIcon from "@mui/icons-material/Css";
-import JavascriptIcon from "@mui/icons-material/Javascript";
+import "../css styles/paragraphStyles.css";
+import "../css styles/boxStyles.css";
 import React from "react";
+import ButtonSkills from "../My skills/ButtonSkills";
 
 function MySkills() {
   return (
-    <>
+    <Box style={{ backgroundColor: "yellow" }}>
       <CardMedia
         component="img"
         image={backgroundAboutMe}
@@ -22,13 +20,21 @@ function MySkills() {
         align="center"
         style={{
           position: "absolute",
-          top: "120%",
+          top: "100%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           color: "white",
         }}
       >
-        <Grid container style={{ width: "100%", margin: 0 }}>
+        <Grid
+          container
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: 1000,
+          }}
+        >
           <Grid item xs={6}>
             <Box className="boxStyleTitle">
               <p
@@ -45,16 +51,10 @@ function MySkills() {
             </Box>
           </Grid>
 
-          <Grid item xs={6}>
-            <Box className="boxStyleParagraph">
-              <HtmlIcon />
-              <CssIcon />
-              <JavascriptIcon />
-            </Box>
-          </Grid>
+          <ButtonSkills />
         </Grid>
       </Typography>
-    </>
+    </Box>
   );
 }
 

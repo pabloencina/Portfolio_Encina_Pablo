@@ -1,7 +1,7 @@
 import { Box, CardMedia, Grid, Typography } from "@mui/material";
 import backgroundAboutMe from "../Images/background-section-about-me.jpg";
-import "../CssStyles/paragraphStyles.css";
-import "../CssStyles/boxStyles.css";
+import "../css styles/paragraphStyles.css";
+import "../css styles/boxStyles.css";
 import React from "react";
 
 function AboutMe() {
@@ -25,7 +25,15 @@ function AboutMe() {
           color: "white",
         }}
       >
-        <Grid container style={{ width: "100%", margin: 0 }}>
+        <Grid
+          container
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: 1000,
+          }}
+        >
           <Grid item xs={6}>
             <Box className="boxStyleTitle">
               <p

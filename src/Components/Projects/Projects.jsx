@@ -1,5 +1,5 @@
-import "../CssStyles/paragraphStyles.css";
-import "../CssStyles/boxStyles.css";
+import "../css styles/paragraphStyles.css";
+import "../css styles/boxStyles.css";
 import React from "react";
 import CardsContainer from "./CardsContainer";
 
