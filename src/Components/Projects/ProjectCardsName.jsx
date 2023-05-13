@@ -33,7 +33,7 @@ const nameProjects = [
   },
 ];
 
-const ProjectCardsName = ({ handleCardClick }) => {
+const ProjectCardsName = ({ handleCardClick, clickButton }) => {
   return (
     <>
       {nameProjects.map((card) => (
@@ -44,6 +44,7 @@ const ProjectCardsName = ({ handleCardClick }) => {
             onClick={() => handleCardClick(card.id)}
           >
             <CardMedia
+              key={card.id}
               component="img"
               image={technologicalBackground}
               alt="Background Section About Me"

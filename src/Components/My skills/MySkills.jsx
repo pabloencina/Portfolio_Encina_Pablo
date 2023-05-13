@@ -50,8 +50,9 @@ function MySkills() {
               </p>
             </Box>
           </Grid>
-
-          <ButtonSkills />
+          <Grid container>
+            <ButtonSkills />
+          </Grid>
         </Grid>
       </Typography>
     </Box>

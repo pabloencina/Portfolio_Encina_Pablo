@@ -5,8 +5,11 @@ import ProjectCardsDescription from "./ProjectCardsDescription";
 
 const CardsContainer = () => {
   const [showNewCard, setShowNewCard] = useState(false);
+  const [clickButton, setClickButton] = useState(null);
 
-  const handleCardClick = (e) => {
+  const handleCardClick = (id) => {
+    console.log(id);
+    setClickButton(id);
     setShowNewCard(true);
   };
 
@@ -21,9 +24,15 @@ const CardsContainer = () => {
       }}
     >
       {!showNewCard ? (
-        <ProjectCardsName handleCardClick={handleCardClick} />
+        <ProjectCardsName
+          handleCardClick={handleCardClick}
+          clickButton={clickButton}
+        />
       ) : (
-        <ProjectCardsDescription handleCardClick={handleCardClick} />
+        <ProjectCardsDescription
+          handleCardClick={handleCardClick}
+          clickButton={clickButton}
+        />
       )}
     </Grid>
   );

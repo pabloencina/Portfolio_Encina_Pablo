@@ -1,0 +1,13 @@
+.button-move-up {
+    transition: transform 1s;
+    color: white;
+    background-color: #343434;
+  }
+  
+  .button-move-up:hover {
+    transform: translateY(-10px);
+  }
+  
+  .active {
+    background-color: red;
+  }
