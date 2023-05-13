@@ -21,6 +21,7 @@ const CardsContainer = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "black",
       }}
     >
       {!showNewCard ? (

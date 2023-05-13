@@ -6,12 +6,17 @@ import React from "react";
 
 function AboutMe() {
   return (
-    <div>
+    <Box
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <CardMedia
         component="img"
         image={backgroundAboutMe}
         alt="Background Section About Me"
-        height="400px"
       />
       <Typography
         variant="h4"
@@ -19,7 +24,6 @@ function AboutMe() {
         align="center"
         style={{
           position: "absolute",
-          top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           color: "white",
@@ -69,7 +73,7 @@ function AboutMe() {
           </Grid>
         </Grid>
       </Typography>
-    </div>
+    </Box>
   );
 }
 

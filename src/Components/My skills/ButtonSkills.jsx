@@ -4,7 +4,6 @@ import { nameSkills } from "../Data/dataSkills";
 import { useSpring, animated } from "react-spring";
 import "../css styles/animate.css";
 import useHoverBtnKills from "../Hooks/useHoverBtnSkills";
-import { Button } from "@mui/material";
 
 const ButtonSkills = () => {
   const { isHover, handleMouseEnterBtnSkills, handleMouseLeaveBtnSkills } =
@@ -19,8 +18,8 @@ const ButtonSkills = () => {
     fontSize: "20px",
     fontFamily: "Roboto",
     transition: "0.5s",
-    backgroundColor: isHover ? "#150050" : "#343434",
-    color: "white",
+    backgroundColor: isHover ? "white" : "#03001C",
+    color: isHover ? "#03001C" : "white",
     textDecoration: "none",
   });
 

@@ -7,12 +7,11 @@ import ButtonSkills from "../My skills/ButtonSkills";
 
 function MySkills() {
   return (
-    <Box style={{ backgroundColor: "yellow" }}>
+    <>
       <CardMedia
         component="img"
         image={backgroundAboutMe}
         alt="Background Section About Me"
-        height="400px"
       />
       <Typography
         variant="h4"
@@ -26,16 +25,8 @@ function MySkills() {
           color: "white",
         }}
       >
-        <Grid
-          container
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: 1000,
-          }}
-        >
-          <Grid item xs={6}>
+        <Grid container>
+          <Grid item xs={12}>
             <Box className="boxStyleTitle">
               <p
                 style={{
@@ -43,19 +34,67 @@ function MySkills() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  height: "200px",
+                  height: "100px",
                 }}
               >
-                MY SKILLS
+                TECHNOLOGIES AND SOFTWARE TOOLS
               </p>
             </Box>
           </Grid>
           <Grid container>
             <ButtonSkills />
           </Grid>
+          <Box className="boxStyleTitle" style={{ width: "100%" }}>
+            <p
+              style={{
+                fontFamily: "monospace",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "100px",
+              }}
+            >
+              SOFT SKILLS
+            </p>
+            <Box
+              className="boxStyleTitle"
+              style={{
+                width: "100%",
+
+                height: "300px",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "monospace",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "18px",
+                }}
+              >
+                I consider myself a person with good effective communication,
+                since my last job as a manager in the casino business and having
+                studied Ontological Coaching gave me tools to develop myself.
+              </p>
+              <p
+                style={{
+                  fontFamily: "monospace",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "18px",
+                }}
+              >
+                I have experienced teamwork when I worked in the kitchen
+                section, always developing together with my colleagues and
+                helping to meet the objectives.
+              </p>
+            </Box>
+          </Box>
         </Grid>
       </Typography>
-    </Box>
+    </>
   );
 }
 

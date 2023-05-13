@@ -1,164 +1,138 @@
-import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
+import * as React from "react";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+import Container from "@mui/material/Container";
 import photoCv from "../Components/Images/photo-cv.jpg";
-import "../Components/css styles/navbar.css";
+import { Link } from "react-router-dom";
 
-const pages = ["About Me", "My Skills", "Projects"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
-function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
+function NavBar() {
   return (
-    <AppBar position="static" className="navbarStyle">
+    <AppBar
+      position="static"
+      style={{
+        backgroundColor: "#03001C",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 300,
-              letterSpacing: ".2rem",
-              color: "inherit",
-              textDecoration: "none",
+          <Link to="/">
+            <img
+              src={photoCv}
+              alt="logo"
+              sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+              style={{ width: "275px", height: "250px" }}
+            />
+          </Link>
+          <Box
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "50%",
+              height: "150px",
             }}
+            mr={4}
           >
-            Encina Pablo David
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOG
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+            <div>
+              <h2
+                align="center"
+                component="a"
+                href="/"
+                sx={{
+                  fontFamily: "monospace",
+                  fontWeight: 200,
+                  letterSpacing: ".1rem",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
               >
-                {page}
-              </Button>
-            ))}
+                ENCINA PABLO DAVID
+              </h2>
+
+              <h2
+                align="center"
+                component="a"
+                href="/"
+                sx={{
+                  fontFamily: "monospace",
+                  fontWeight: 500,
+                  letterSpacing: ".2rem",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                QA ANALYST | TESTER JR
+              </h2>
+            </div>
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Photo-CV" src={photoCv} />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
+          <Box
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              width: "50%",
+            }}
+          >
+            <Button
+              style={{
+                backgroundColor: "#03001C",
+                marginLeft: "10Px",
+                fontFamily: "monospace",
               }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              variant="text"
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+              <Link
+                to={"/about-me"}
+                variant="contained"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  backgroundColor: "#03001C",
+                  marginLeft: "10Px",
+                  fontFamily: "monospace",
+                }}
+              >
+                About Me
+              </Link>
+            </Button>
+            <Button
+              style={{
+                backgroundColor: "#03001C",
+                marginLeft: "10Px",
+                fontFamily: "monospace",
+              }}
+              variant="text"
+            >
+              <Link
+                to={"/my-skills"}
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                My Skills
+              </Link>
+            </Button>
+
+            <Button
+              style={{
+                backgroundColor: "#03001C",
+                marginLeft: "10Px",
+                fontFamily: "monospace",
+              }}
+              variant="text"
+            >
+              <Link
+                to={"/projects"}
+                variant="contained"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Projects
+              </Link>
+            </Button>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
-export default Navbar;
+export default NavBar;

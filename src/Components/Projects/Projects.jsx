@@ -2,13 +2,14 @@ import "../css styles/paragraphStyles.css";
 import "../css styles/boxStyles.css";
 import React from "react";
 import CardsContainer from "./CardsContainer";
+import { Box } from "@mui/material";
 
 const Projects = () => {
   return (
-    <div>
+    <Box style={{ backgroundColor: "black" }}>
       <p
         style={{
-          fontFamily: "monospace",
+          fontFamily: "roboto",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -20,7 +21,7 @@ const Projects = () => {
         PROJECTS
       </p>
       <CardsContainer />
-    </div>
+    </Box>
   );
 };
 
