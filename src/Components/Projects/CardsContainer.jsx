@@ -1,18 +1,8 @@
 import { Grid } from "@mui/material";
-import React, { useState } from "react";
-import ProjectCardsName from "./ProjectCardsName";
-import ProjectCardsDescription from "./ProjectCardsDescription";
+import { nameProjects } from "../Data/dataProjects";
+import ProjectCard from "./ProjectCard";
 
 const CardsContainer = () => {
-  const [showNewCard, setShowNewCard] = useState(false);
-  const [clickButton, setClickButton] = useState(null);
-
-  const handleCardClick = (id) => {
-    console.log(id);
-    setClickButton(id);
-    setShowNewCard(true);
-  };
-
   return (
     <Grid
       container
@@ -24,17 +14,22 @@ const CardsContainer = () => {
         backgroundColor: "black",
       }}
     >
-      {!showNewCard ? (
-        <ProjectCardsName
-          handleCardClick={handleCardClick}
-          clickButton={clickButton}
-        />
-      ) : (
-        <ProjectCardsDescription
-          handleCardClick={handleCardClick}
-          clickButton={clickButton}
-        />
-      )}
+      {nameProjects.map((project) => {
+        return (
+          <Grid
+            container
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "black",
+            }}
+          >
+            <ProjectCard key={"project-card-" + project.id} project={project} />
+          </Grid>
+        );
+      })}
     </Grid>
   );
 };
