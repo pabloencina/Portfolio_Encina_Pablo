@@ -1,43 +1,24 @@
 import { Button, CardMedia, Grid, Typography } from "@mui/material";
 import "../css styles/rotatedStyle.css";
 import technologicalBackground from "../Images/technological-background.jpg";
+import "../css styles/boxStyles.css";
+import { nameProjects } from "../Data/dataProjects";
 //import React, { useState } from "react";
 //import ProjectCardsDescription from "./ProjectCardsDescription";
-
-const nameProjects = [
-  {
-    id: 1,
-    name: "E-COMMERCE YOGA PRODUCTS",
-    description:
-      "Abrazar el presente, Tienda Online es un e-commerce que permite, elegir y comprar productos relacionados a yoga, meditación.",
-    link: "https://ecommerce-abrazar-el-presente.web.app/",
-  },
-  {
-    id: 2,
-    name: "MARVEL OFFICIAL PAGE MANUAL TESTING",
-    description: "",
-    link: "",
-  },
-  {
-    id: 3,
-    name: "E-COMMERCE MANUAL TESTING YOGA PRODUCTS",
-    description: "",
-    link: "",
-  },
-  {
-    id: 4,
-    name: "YOGA PRODUCTS E-COMMERCE DATABASE",
-    description:
-      "Se crea una base de datos para el proyecto 'Abrazar el presente' siendo este un e-commerce realizado en React.js.",
-    link: "",
-  },
-];
 
 const ProjectCardsName = ({ handleCardClick, clickButton }) => {
   return (
     <>
       {nameProjects.map((card) => (
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={6}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
+          }}
+        >
           <Button
             key={card.id}
             id={card.id}
@@ -48,7 +29,11 @@ const ProjectCardsName = ({ handleCardClick, clickButton }) => {
               component="img"
               image={technologicalBackground}
               alt="Background Section About Me"
-              style={{ border: "1px solid white" }}
+              style={{
+                border: "1px solid white",
+                width: "400px",
+                height: "500px",
+              }}
             />
             <Typography
               variant="h4"
@@ -68,7 +53,7 @@ const ProjectCardsName = ({ handleCardClick, clickButton }) => {
                   alignItems: "center",
                   justifyContent: "center",
                   height: "200px",
-                  fontFamily: "roboto",
+                  fontFamily: "monospace",
                 }}
               >
                 {card.name}

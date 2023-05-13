@@ -9,7 +9,7 @@ import Footer from "./Components/Footer/Footer";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#150050", // Cambiar el color primario
+      main: "#03001C", // Cambiar el color primario
     },
   },
 });

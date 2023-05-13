@@ -1,41 +1,23 @@
-import { Button, CardMedia, Grid, Typography } from "@mui/material";
+import { Box, Button, CardMedia, Grid, Typography } from "@mui/material";
 import milkyWayBackground from "../Images/milky-way-background.jpg";
+import { nameProjects } from "../Data/dataProjects";
+import { Link } from "react-router-dom";
+import AddLinkIcon from "@mui/icons-material/AddLink";
 //import React, { useState } from "react";
-
-const nameProjects = [
-  {
-    id: 1,
-    name: "E-COMMERCE YOGA PRODUCTS",
-    description:
-      "Abrazar el presente, Tienda Online es un e-commerce que permite, elegir y comprar productos relacionados a yoga, meditación.",
-    link: "https://ecommerce-abrazar-el-presente.web.app/",
-  },
-  {
-    id: 2,
-    name: "MARVEL OFFICIAL PAGE MANUAL TESTING",
-    description: "",
-    link: "",
-  },
-  {
-    id: 3,
-    name: "E-COMMERCE MANUAL TESTING YOGA PRODUCTS",
-    description: "",
-    link: "",
-  },
-  {
-    id: 4,
-    name: "YOGA PRODUCTS E-COMMERCE DATABASE",
-    description:
-      "Se crea una base de datos para el proyecto 'Abrazar el presente' siendo este un e-commerce realizado en React.js.",
-    link: "",
-  },
-];
 
 const ProjectCardsDescription = ({ handleCardClick }) => {
   return (
     <>
       {nameProjects.map((card) => (
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={6}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
+          }}
+        >
           <Button
             key={card.id}
             id={card.id}
@@ -45,7 +27,11 @@ const ProjectCardsDescription = ({ handleCardClick }) => {
               component="img"
               image={milkyWayBackground}
               alt="Background Section About Me"
-              style={{ border: "1px solid white" }}
+              style={{
+                border: "1px solid white",
+                width: "400px",
+                height: "500px",
+              }}
             />
             <Typography
               component="p"
@@ -58,7 +44,7 @@ const ProjectCardsDescription = ({ handleCardClick }) => {
                 color: "white",
               }}
             >
-              <h1 style={{ fontSize: "18px", fontFamily: "roboto" }}>
+              <h1 style={{ fontSize: "18px", fontFamily: "monospace" }}>
                 {card.name}
               </h1>
               <p
@@ -67,12 +53,26 @@ const ProjectCardsDescription = ({ handleCardClick }) => {
                   alignItems: "center",
                   justifyContent: "center",
                   height: "200px",
-                  fontFamily: "roboto",
+                  fontFamily: "monospace",
                 }}
               >
                 {card.description}
               </p>
-              <p>{card.link}</p>
+              <Box>
+                <AddLinkIcon style={{ color: "red" }}></AddLinkIcon>
+              </Box>
+
+              <Link
+                to="https://ecommerce-abrazar-el-presente.web.app/"
+                target="_blank"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontFamily: "monospace",
+                }}
+              >
+                {card.link}
+              </Link>
             </Typography>
           </Button>
         </Grid>

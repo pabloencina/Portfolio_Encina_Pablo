@@ -102,7 +102,7 @@ const Footer = () => {
               align="center"
               style={{ color: "white" }}
               sx={{
-                fontFamily: "Roboto",
+                fontFamily: "monospace",
                 fontWeight: 300,
                 letterSpacing: ".1rem",
                 textDecoration: "none",
@@ -120,7 +120,7 @@ const Footer = () => {
               align="center"
               style={{ color: "white" }}
               sx={{
-                fontFamily: "Roboto",
+                fontFamily: "monospace",
                 fontWeight: 300,
                 letterSpacing: ".1rem",
                 textDecoration: "none",
