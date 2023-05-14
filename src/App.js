@@ -5,6 +5,7 @@ import AboutMe from "./Components/About me/AboutMe";
 import MySkills from "./Components/My skills/MySkills";
 import Projects from "./Components/Projects/Projects";
 import Footer from "./Components/Footer/Footer";
+import MyPortfolio from "./Components/MyPortfolio.jsx/MyPortfolio";
 
 const theme = createTheme({
   palette: {
@@ -20,6 +21,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Navbar />
         <Routes>
+          <Route path="/" element={<MyPortfolio />} />
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/my-skills" element={<MySkills />} />
           <Route path="/projects" element={<Projects />} />

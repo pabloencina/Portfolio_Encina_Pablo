@@ -19,7 +19,7 @@ function NavBar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link to="/">
+          <Link to="/about-me">
             <img
               src={photoCv}
               alt="logo"
@@ -38,10 +38,10 @@ function NavBar() {
             mr={4}
           >
             <div>
-              <h2
+              <h3
                 align="center"
                 component="a"
-                href="/"
+                href="/about-me"
                 sx={{
                   fontFamily: "monospace",
                   fontWeight: 200,
@@ -51,12 +51,12 @@ function NavBar() {
                 }}
               >
                 ENCINA PABLO DAVID
-              </h2>
+              </h3>
 
-              <h2
+              <h3
                 align="center"
                 component="a"
-                href="/"
+                href="/about-me"
                 sx={{
                   fontFamily: "monospace",
                   fontWeight: 500,
@@ -66,7 +66,7 @@ function NavBar() {
                 }}
               >
                 QA ANALYST | TESTER JR
-              </h2>
+              </h3>
             </div>
           </Box>
 
