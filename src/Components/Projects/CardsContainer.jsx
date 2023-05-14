@@ -7,23 +7,18 @@ const CardsContainer = () => {
     <Grid
       container
       style={{
-        width: "100%",
         display: "flex",
-        justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "black",
+        justifyContent: "center",
       }}
     >
       {nameProjects.map((project) => {
         return (
           <Grid
-            container
             style={{
-              width: "100%",
               display: "flex",
-              justifyContent: "center",
               alignItems: "center",
-              backgroundColor: "black",
+              justifyContent: "center",
             }}
           >
             <ProjectCard key={"project-card-" + project.id} project={project} />

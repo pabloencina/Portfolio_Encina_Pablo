@@ -11,7 +11,13 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <Grid xs>
+    <Grid
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       {!showNewCard ? (
         <ProjectNameCard project={project} handleCardClick={handleCardClick} />
       ) : (

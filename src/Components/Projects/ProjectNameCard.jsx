@@ -4,12 +4,10 @@ import technologicalBackground from "../Images/technological-background.jpg";
 import "../css styles/boxStyles.css";
 
 const ProjectNameCard = ({ project, handleCardClick }) => {
-  console.log(handleCardClick);
-
   return (
     <>
       <Grid
-        key={project.id}
+        item
         xs={6}
         style={{
           display: "flex",
