@@ -2,7 +2,7 @@ import "../css styles/paragraphStyles.css";
 import "../css styles/boxStyles.css";
 import React from "react";
 import CardsContainer from "./CardsContainer";
-import { Box, Grid } from "@mui/material";
+import { Box } from "@mui/material";
 
 const Projects = () => {
   return (

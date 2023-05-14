@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "../css styles/buttonSkillsStyles.css";
-import { nameSkills } from "../Data/dataSkills";
 import { useSpring, animated } from "react-spring";
 import "../css styles/animate.css";
 import useHoverBtnKills from "../Hooks/useHoverBtnSkills";
 
-const ButtonSkills = () => {
+const ButtonSkills = ({ skill }) => {
+  console.log(skill);
   const { isHover, handleMouseEnterBtnSkills, handleMouseLeaveBtnSkills } =
     useHoverBtnKills(false);
   const [isJumping, setIsJumping] = useState(false);
@@ -13,8 +13,6 @@ const ButtonSkills = () => {
 
   const jump = useSpring({
     transform: isJumping ? "translateY(1px)" : "translateY(150)",
-    //color: "white",
-    // backgroundColor: "#343434",
     fontSize: "20px",
     fontFamily: "Roboto",
     transition: "0.5s",
@@ -30,27 +28,25 @@ const ButtonSkills = () => {
 
   return (
     <>
-      {nameSkills.map((skill) => (
-        <div className="boxSkillsStyle" key={skill.id}>
-          <div className="item">
-            <animated.button
-              className={
-                activeButton === skill.id
-                  ? "jumping-button active"
-                  : isJumping
-                  ? "jumping-button"
-                  : ""
-              }
-              style={jump}
-              onClick={() => handleJump(skill.id)}
-              onMouseEnter={handleMouseEnterBtnSkills}
-              onMouseLeave={handleMouseLeaveBtnSkills}
-            >
-              {skill.nameSkill}
-            </animated.button>
-          </div>
+      <div className="boxSkillsStyle" key={skill.id}>
+        <div className="item">
+          <animated.button
+            className={
+              activeButton === skill.id
+                ? "jumping-button active"
+                : isJumping
+                ? "jumping-button"
+                : ""
+            }
+            style={jump}
+            onClick={() => handleJump(skill.id)}
+            onMouseEnter={handleMouseEnterBtnSkills}
+            onMouseLeave={handleMouseLeaveBtnSkills}
+          >
+            {skill.nameSkill}
+          </animated.button>
         </div>
-      ))}
+      </div>
     </>
   );
 };

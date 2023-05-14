@@ -3,7 +3,7 @@ import backgroundAboutMe from "../Images/background-section-about-me.jpg";
 import "../css styles/paragraphStyles.css";
 import "../css styles/boxStyles.css";
 import React from "react";
-import ButtonSkills from "../My skills/ButtonSkills";
+import ButtonSkillContainer from "./ButtonSkillContainer";
 
 function MySkills() {
   return (
@@ -42,7 +42,7 @@ function MySkills() {
             </Box>
           </Grid>
           <Grid container>
-            <ButtonSkills />
+            <ButtonSkillContainer />
           </Grid>
           <Box className="boxStyleTitle" style={{ width: "100%" }}>
             <p
@@ -60,7 +60,6 @@ function MySkills() {
               className="boxStyleTitle"
               style={{
                 width: "100%",
-
                 height: "300px",
               }}
             >
