@@ -5,7 +5,6 @@ import "../css styles/animate.css";
 import useHoverBtnKills from "../Hooks/useHoverBtnSkills";
 
 const ButtonSkills = ({ skill }) => {
-  console.log(skill);
   const { isHover, handleMouseEnterBtnSkills, handleMouseLeaveBtnSkills } =
     useHoverBtnKills(false);
   const [isJumping, setIsJumping] = useState(false);
@@ -14,8 +13,8 @@ const ButtonSkills = ({ skill }) => {
   const jump = useSpring({
     transform: isJumping ? "translateY(1px)" : "translateY(150)",
     fontSize: "20px",
-    fontFamily: "Roboto",
-    transition: "0.5s",
+    fontFamily: "monospace",
+    transition: "0.1s",
     backgroundColor: isHover ? "white" : "#03001C",
     color: isHover ? "#03001C" : "white",
     textDecoration: "none",
@@ -29,7 +28,7 @@ const ButtonSkills = ({ skill }) => {
   return (
     <>
       <div className="boxSkillsStyle" key={skill.id}>
-        <div className="item">
+        <div className="move-button">
           <animated.button
             className={
               activeButton === skill.id

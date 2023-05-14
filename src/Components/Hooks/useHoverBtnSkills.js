@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MessageSkillsButton from "../MessageSkillsButton";
 
 const useHoverBtnKills = () => {
   const [isHover, setIsHover] = useState(false);
@@ -7,11 +8,12 @@ const useHoverBtnKills = () => {
     backgroundColor: isHover ? "white" : "#564592",
     color: isHover ? "#564592" : "white",
     textDecoration: "none",
-    fontFamily: "Roboto",
+    fontFamily: "monospace",
     //borderRadius: "5%",
   };
   const handleMouseEnterBtnSkills = () => {
     setIsHover(true);
+    <MessageSkillsButton />;
   };
   const handleMouseLeaveBtnSkills = () => {
     setIsHover(false);

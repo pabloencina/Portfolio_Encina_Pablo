@@ -5,6 +5,8 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import photoCv from "../Components/Images/photo-cv.jpg";
+import AdsClickIcon from "@mui/icons-material/AdsClick";
+import "../Components/css styles/animate.css";
 import { Link } from "react-router-dom";
 
 function NavBar() {
@@ -129,6 +131,24 @@ function NavBar() {
                 Projects
               </Link>
             </Button>
+          </Box>
+          <Box
+            m={2}
+            style={{
+              width: "100px",
+              display: "flex",
+              justifyContent: "center",
+            }}
+            className="moveCardLink"
+          >
+            <Link
+              style={{ color: "white" }}
+              title="Curriculum"
+              to="https://drive.google.com/file/d/1gs9c3NU_nmdS97i1MLJkemJS_9XgMsud/view?usp=share_link"
+              target="_blank"
+            >
+              <AdsClickIcon />
+            </Link>
           </Box>
         </Toolbar>
       </Container>

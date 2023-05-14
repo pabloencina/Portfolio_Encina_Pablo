@@ -34,7 +34,6 @@ function MySkills() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  height: "100px",
                 }}
               >
                 TECHNOLOGIES AND SOFTWARE TOOLS
@@ -51,7 +50,6 @@ function MySkills() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                height: "100px",
               }}
             >
               SOFT SKILLS

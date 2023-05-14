@@ -2,7 +2,7 @@ import { Box, Button, CardMedia, Grid, Typography } from "@mui/material";
 import milkyWayBackground from "../Images/milky-way-background.jpg";
 import { Link } from "react-router-dom";
 import AddLinkIcon from "@mui/icons-material/AddLink";
-//import React, { useState } from "react";
+import "../css styles/animate.css";
 
 const ProjectCardsDescription = ({ project, handleCardClick }) => {
   return (
@@ -52,21 +52,28 @@ const ProjectCardsDescription = ({ project, handleCardClick }) => {
             >
               {project.description}
             </p>
-            <Box>
-              <AddLinkIcon style={{ color: "red" }}></AddLinkIcon>
-            </Box>
 
-            <Link
-              to="https://ecommerce-abrazar-el-presente.web.app/"
-              target="_blank"
-              style={{
-                color: "white",
-                textDecoration: "none",
-                fontFamily: "monospace",
-              }}
+            <Box
+              className="moveCardLink"
+              style={{ width: "200px", backgroundColor: "#03001C" }}
             >
-              {project.link}
-            </Link>
+              <Box>
+                <AddLinkIcon style={{ color: "white" }}></AddLinkIcon>
+              </Box>
+
+              <Link
+                title="Link"
+                to={project.link}
+                target="_blank"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontFamily: "monospace",
+                }}
+              >
+                Project link
+              </Link>
+            </Box>
           </Typography>
         </Button>
       </Grid>

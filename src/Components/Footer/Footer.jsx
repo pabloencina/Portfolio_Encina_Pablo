@@ -6,17 +6,10 @@ import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
 import { Link } from "react-router-dom";
-//import { useState } from "react";
+import AdsClickIcon from "@mui/icons-material/AdsClick";
+import "../css styles/animate.css";
 
 const Footer = () => {
-  //   const [isHover, setIsHover] = useState(false);
-
-  //   const handleMouseEnter = () => {
-  //     setIsHover(true);
-  //   };
-  //   const handleMouseLeave = () => {
-  //     setIsHover(false);
-  //   };
   return (
     <Box
       style={{
@@ -131,6 +124,25 @@ const Footer = () => {
           </div>
         </Box>
       </Grid>
+      <Box
+        m={4}
+        style={{
+          width: "100px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        className="moveCardLink"
+      >
+        <Link
+          style={{ color: "white" }}
+          title="Curriculum"
+          to="https://drive.google.com/file/d/1gs9c3NU_nmdS97i1MLJkemJS_9XgMsud/view?usp=share_link"
+          target="_blank"
+        >
+          <AdsClickIcon />
+        </Link>
+      </Box>
     </Box>
   );
 };

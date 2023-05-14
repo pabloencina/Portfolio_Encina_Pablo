@@ -1,13 +1,21 @@
-.button-move-up {
-    transition: transform 1s;
-    color: white;
-    background-color: #343434;
+.move {
+  animation: move 0.1s infinite alternate;
+}
+
+.moveCardLink {
+  animation: move 0.5s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-5px);
   }
-  
-  .button-move-up:hover {
-    transform: translateY(-10px);
+  to {
+    transform: translateX(5px);
   }
-  
-  .active {
-    background-color: red;
-  }
+}
+
+.move-button:hover {
+  cursor: pointer;
+  animation: move 0.1s infinite alternate;
+}
