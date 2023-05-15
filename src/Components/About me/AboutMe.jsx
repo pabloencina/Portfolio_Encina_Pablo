@@ -1,11 +1,22 @@
 import { Box, CardMedia, Grid, Typography } from "@mui/material";
 import backgroundAboutMe from "../Images/background-section-about-me.jpg";
 import "../css styles/paragraphStyles.css";
-import "../css styles/boxStyles.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Spinner from "../spinner/Spinner";
 
 function AboutMe() {
-  return (
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return isLoading ? (
+    <Spinner />
+  ) : (
     <Box
       style={{
         display: "flex",

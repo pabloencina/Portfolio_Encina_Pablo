@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import photoCv from "../Components/Images/photo-cv.jpg";
 import AdsClickIcon from "@mui/icons-material/AdsClick";
+import styles from "../Components/css styles/boxStyles.module.css";
 import "../Components/css styles/animate.css";
 import { Link } from "react-router-dom";
 
@@ -19,7 +20,7 @@ function NavBar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link to="/about-me">
+          <Link to="/">
             <img
               src={photoCv}
               alt="logo"
@@ -38,35 +39,13 @@ function NavBar() {
             mr={4}
           >
             <div>
-              <h3
-                align="center"
-                component="a"
-                href="/about-me"
-                sx={{
-                  fontFamily: "monospace",
-                  fontWeight: 200,
-                  letterSpacing: ".1rem",
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
+              <h4 align="center" component="a" href="/about-me">
                 ENCINA PABLO DAVID
-              </h3>
+              </h4>
 
-              <h3
-                align="center"
-                component="a"
-                href="/about-me"
-                sx={{
-                  fontFamily: "monospace",
-                  fontWeight: 500,
-                  letterSpacing: ".2rem",
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
-                QA ANALYST | TESTER JR
-              </h3>
+              <h4 align="center" component="a" href="/about-me">
+                TESTER QA | JR
+              </h4>
             </div>
           </Box>
 
@@ -77,36 +56,19 @@ function NavBar() {
               width: "50%",
             }}
           >
-            <Button
-              style={{
-                backgroundColor: "#03001C",
-                marginLeft: "10Px",
-                fontFamily: "monospace",
-              }}
-              variant="text"
-            >
+            <Button className={styles.buttonStyle} variant="text">
               <Link
                 to={"/about-me"}
                 variant="contained"
                 style={{
                   textDecoration: "none",
                   color: "white",
-                  backgroundColor: "#03001C",
-                  marginLeft: "10Px",
-                  fontFamily: "monospace",
                 }}
               >
                 About Me
               </Link>
             </Button>
-            <Button
-              style={{
-                backgroundColor: "#03001C",
-                marginLeft: "10Px",
-                fontFamily: "monospace",
-              }}
-              variant="text"
-            >
+            <Button className={styles.buttonStyle} variant="text">
               <Link
                 to={"/my-skills"}
                 style={{ textDecoration: "none", color: "white" }}
@@ -115,14 +77,7 @@ function NavBar() {
               </Link>
             </Button>
 
-            <Button
-              style={{
-                backgroundColor: "#03001C",
-                marginLeft: "10Px",
-                fontFamily: "monospace",
-              }}
-              variant="text"
-            >
+            <Button className={styles.buttonStyle} variant="text">
               <Link
                 to={"/projects"}
                 variant="contained"

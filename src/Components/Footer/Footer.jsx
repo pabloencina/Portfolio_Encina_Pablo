@@ -101,7 +101,7 @@ const Footer = () => {
                 textDecoration: "none",
               }}
             >
-              2994231917
+              +54-2994231917
             </p>
 
             <p variant="h6" align="center">

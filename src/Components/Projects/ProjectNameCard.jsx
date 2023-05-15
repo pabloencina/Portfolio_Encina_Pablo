@@ -1,7 +1,6 @@
 import { Button, CardMedia, Grid, Typography } from "@mui/material";
 import "../css styles/rotatedStyle.css";
 import technologicalBackground from "../Images/technological-background.jpg";
-import "../css styles/boxStyles.css";
 
 const ProjectNameCard = ({ project, handleCardClick }) => {
   return (

@@ -1,25 +1,32 @@
-import "../css styles/paragraphStyles.css";
-import "../css styles/boxStyles.css";
-import React from "react";
-import CardsContainer from "./CardsContainer";
+import styles from "../css styles/boxStyles.module.css";
 import { Box } from "@mui/material";
+import CardsContainer from "./CardsContainer";
+import React, { useEffect, useState } from "react";
+import Spinner from "../spinner/Spinner";
 
 const Projects = () => {
-  return (
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return isLoading ? (
+    <Spinner />
+  ) : (
     <Box style={{ backgroundColor: "black" }}>
-      <p
+      <Box
         style={{
-          fontFamily: "monospace",
           display: "flex",
-          alignItems: "center",
           justifyContent: "center",
-          height: "200px",
-          color: "white",
-          fontSize: "30px",
+          alignItems: "center",
         }}
       >
-        PROJECTS
-      </p>
+        <p className={styles.styleTitle}>PROJECTS</p>
+      </Box>
 
       <CardsContainer />
     </Box>

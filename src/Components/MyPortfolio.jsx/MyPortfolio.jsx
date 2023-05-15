@@ -1,8 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-
 import "../css styles/paragraphStyles.css";
-import "../css styles/boxStyles.css";
 import "../css styles/myPortfolio.css";
 
 const MyPortfolio = () => {
