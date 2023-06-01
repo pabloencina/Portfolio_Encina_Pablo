@@ -21,7 +21,11 @@ const CardsContainer = () => {
               justifyContent: "center",
             }}
           >
-            <ProjectCard key={"project-card-" + project.id} project={project} />
+            <ProjectCard
+              key={"project-card-" + project.id}
+              project={project}
+              {...project}
+            />
           </Grid>
         );
       })}

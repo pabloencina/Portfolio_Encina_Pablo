@@ -10,7 +10,8 @@ export const nameProjects = [
     id: 2,
     name: "MARVEL OFFICIAL PAGE MANUAL TESTING",
     description: "",
-    link: "https://drive.google.com/drive/folders/11XHyarPthN5tBqVTpBlP1YfXw9v7h632?usp=share_link",
+    //link: "https://drive.google.com/drive/folders/11XHyarPthN5tBqVTpBlP1YfXw9v7h632?usp=share_link",
+    link: "https://encina.atlassian.net/jira/your-work",
   },
   {
     id: 3,
